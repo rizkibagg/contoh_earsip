@@ -32,15 +32,44 @@ class BelumMenikahController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'nomor' => 'required',
+            'nama' => 'required',
+            'jenis_kelamin' => 'required',
+            'tempat' => 'required',
+            'tanggal_lahir' => 'required',
+            'agama' => 'required',
+            'pekerjaan' => 'required',
+            'alamat' => 'required',
+        ]);
+
+        $skbm = new BelumMenikah;
+        $skbm->nomor = $request->nomor;
+        $skbm->nama = $request->nama;
+        $skbm->jenis_kelamin = $request->jenis_kelamin;
+        $skbm->tempat = $request->tempat;
+        $skbm->tanggal_lahir = $request->tanggal_lahir;
+        $skbm->agama = $request->agama;
+        $skbm->pekerjaan = $request->pekerjaan;
+        $skbm->alamat = $request->alamat;
+
+        $skbm->save();
+
+        return redirect()->back();
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show($id)
     {
-        //
+        $skbm = BelumMenikah::findOrFail($id);
+        // Menggunakan view untuk mengambil HTML dari template surat-ktm
+        $data = view('template.surat-kbm', compact('skbm'))->render();
+        // Membuat instance DomPDF
+        $pdf = Pdf::loadHTML($data);
+        // Menghasilkan file PDF dan mengirimkannya sebagai respons stream
+        return $pdf->stream();
     }
 
     /**
@@ -66,4 +95,5 @@ class BelumMenikahController extends Controller
     {
         //
     }
+    
 }
