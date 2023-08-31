@@ -7,7 +7,7 @@
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="/">Home</a></li>
                 <li class="breadcrumb-item">Surat</li>
-                <li class="breadcrumb-item active">Keterangan Tidak Mampu</li>
+                <li class="breadcrumb-item active">Keterangan Belum Menikah</li>
             </ol>
         </nav>
     </div><!-- End Page Title -->
@@ -20,7 +20,7 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="d-flex justify-content-between align-items-center">
-                            <h5 class="card-title">Data Surat Keterangan Tidak Mampu</h5>
+                            <h5 class="card-title">Data Surat Keterangan Belum Menikah</h5>
                             <!-- Button trigger modal -->
                             <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#tambah-surat-ktm">
                                 Tambah Data
@@ -31,11 +31,11 @@
                                 <div class="modal-dialog modal-lg">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h1 class="modal-title fs-5" id="tambah-surat-ktm-Label">Data Tidak Mampu</h1>
+                                            <h1 class="modal-title fs-5" id="tambah-surat-ktm-Label">Data Belum Menikah</h1>
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body">
-                                            <form class="row" action="/surat-ktm" method="POST">
+                                            <form class="row" action="/surat-belummenikah" method="POST">
                                                 @csrf
                                                 <div class="row mb-3">
                                                     <label for="nomor" class="col-sm-3 col-form-label">Nomor Surat</label>
@@ -47,12 +47,6 @@
                                                     <label for="nama" class="col-sm-3 col-form-label">Nama</label>
                                                     <div class="col-sm-9">
                                                         <input type="text" name="nama" class="form-control" id="nama" required>
-                                                    </div>
-                                                </div>
-                                                <div class="row mb-3">
-                                                    <label for="nik" class="col-sm-3 col-form-label">NIK</label>
-                                                    <div class="col-sm-9">
-                                                        <input type="text" name="nik" class="form-control" id="nik" required>
                                                     </div>
                                                 </div>
                                                 <div class="row mb-3">
@@ -76,16 +70,6 @@
                                                     </div>
                                                 </div>
                                                 <div class="row mb-3">
-                                                    <label for="kewarganegaraan" class="col-sm-3 col-form-label">Kewarganegaraan</label>
-                                                    <div class="col-sm-9">
-                                                        <select id="kewarganegaraan" name="kewarganegaraan" class="form-select" required>
-                                                            <option value="" selected>Pilih Kewarganegaraan ...</option>
-                                                            <option value="Indonesia">Indonesia</option>
-                                                            <option value="Asing">Asing</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div class="row mb-3">
                                                     <label for="agama" class="col-sm-3 col-form-label">Agama</label>
                                                     <div class="col-sm-9">
                                                         <select id="agama" name="agama" class="form-select" required>
@@ -101,18 +85,6 @@
                                                     </div>
                                                 </div>
                                                 <div class="row mb-3">
-                                                    <label for="status_perkawinan" class="col-sm-3 col-form-label">Status Perkawinan</label>
-                                                    <div class="col-sm-9">
-                                                        <select id="status_perkawinan" name="status_perkawinan" class="form-select" required>
-                                                            <option value="" selected>Pilih Status Perkawinan ...</option>
-                                                            <option value="Belum Menikah">Belum Menikah</option>
-                                                            <option value="Sudah Menikah">Sudah Menikah</option>
-                                                            <option value="Janda">Janda</option>
-                                                            <option value="Duda">Duda</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div class="row mb-3">
                                                     <label for="pekerjaan" class="col-sm-3 col-form-label">Pekerjaan</label>
                                                     <div class="col-sm-9">
                                                         <input type="text" name="pekerjaan" class="form-control" id="pekerjaan" required>
@@ -124,12 +96,7 @@
                                                         <input type="text" name="alamat" class="form-control" id="alamat" required>
                                                     </div>
                                                 </div>
-                                                <div class="row mb-3">
-                                                    <label for="deskripsi" class="col-sm-3 col-form-label">Deskripsi</label>
-                                                    <div class="col-sm-9">
-                                                        <textarea type="text" name="deskripsi" class="form-control" id="deskripsi" rows="3" required>Bahwa bersangkutan tersebut adalah benar dari keluarga kurang mampu.</textarea>
-                                                    </div>
-                                                </div>
+                
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                                                     <button type="submit" class="btn btn-primary">Simpan</button>
@@ -154,16 +121,16 @@
                             </thead>
                             <tbody>
                                 @php
-                                    $no = count($sktm);
+                                    $no = count($skbm);
                                 @endphp
-                                @foreach ($sktm->reverse() as $value)
+                                @foreach ($skbm->reverse() as $value)
                                     <tr>
                                         <th scope="row">{{ $no-- }}.</th>
                                         <td>{{ $value->nomor }}</td>
                                         <td>{{ $value->nama }}</td>
                                         <td>{{ $value->nik }}</td>
                                         <td class="text-center">
-                                            <a class="btn btn-success" type="submit" target="blank" href="/surat-ktm/{{$value->id}}/view"><i class="fa-solid fa-print"></i></a>
+                                            <a class="btn btn-success" type="submit" target="blank" href="/surat-belummenikah/{{$value->id}}/view"><i class="fa-solid fa-print"></i></a>
                                             <!-- Button trigger modal -->
                                             <a class="btn btn-warning" type="submit" data-bs-toggle="modal" data-bs-target="#ModalEditSKTM-{{$value->id}}" href="/surat-ktm/{{$value->id}}/edit"><i class="fa-solid fa-pen-to-square"></i></a>
                                             <a class="btn btn-danger" type="submit" href="/surat-ktm/{{$value->id}}/delete"><i class="fa-regular fa-trash-can"></i></a>

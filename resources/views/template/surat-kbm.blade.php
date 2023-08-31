@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-    <title>SKTM | {{$sktm->nik}}</title>
+    <title>SKBM | {{$skbm->nama}}</title>
     {{-- <link rel="icon" href="/public/template/assets/img/favicon.png" type="image/icon" > --}}
     <style>
         table tr td {
@@ -129,7 +129,7 @@
             <tr>
                 <td width="537">
                     <center>
-                        <font size="2">Nomor : {{$sktm->nomor}}</font>
+                        <font size="2">Nomor : {{$skbm->nomor}}</font>
                     </center>
                 </td>
             </tr>
@@ -144,34 +144,34 @@
         <table  class="lima">
             <tr>
                 <td> Nama</td>
-                <td>:  {{$sktm->nama}}</td>
+                <td>:  {{$skbm->nama}}</td>
             </tr>
             <tr>
                 <td>Jenis Kelamin</td>
-                <td> : {{$sktm->jenis_kelamin}}</td>
+                <td> : {{$skbm->jenis_kelamin}}</td>
             </tr>
             <tr>
                 <td>Tempat / Tanggal Lahir</td>
-                <td> : {{$sktm->tempat}} / {{date('d-m-Y',strtotime($sktm->tanggal_lahir))}}  </td>
+                <td> : {{$skbm->tempat}} / {{date('d-m-Y',strtotime($skbm->tanggal_lahir))}}  </td>
             </tr>
             <tr>
                 <td>Agama</td>
-                <td> : {{$sktm->agama}}</td>
+                <td> : {{$skbm->agama}}</td>
             </tr>
             <tr>
                 <td>Pekerjaan</td>
-                <td> : {{$sktm->pekerjaan}}</td>
+                <td> : {{$skbm->pekerjaan}}</td>
             </tr>
             <tr>
                 <td>Alamat</td>
-                <td> : {{$sktm->alamat}}</td>
+                <td> : {{$skbm->alamat}}</td>
             </tr>
         </table>
         <table class="empat">
             <tr>
                 <td>
                     <p>
-                        <br>{{$sktm->deskripsi}}<br>
+                        <br>{{$skbm->deskripsi}}<br>
                         &#160; &#160; &#160; &#160;  &#160; &#160; &#160; Demikian surat keterangan ini diberikan kepada yang bersangkutan untuk di pergunakan <br> <br> sebagaimana mestinya.
                     </p>
                 </td>
@@ -180,7 +180,7 @@
 
         <table class="enam">
             <tr>
-                <p>Sentolo, {{ \Carbon\Carbon::parse($sktm['created_at'])->translatedFormat('j F Y') }}</p>
+                <p>Sentolo, {{ \Carbon\Carbon::parse($skbm['created_at'])->translatedFormat('j F Y') }}</p>
             </tr>
         </table>
         <table  class="tujuh">

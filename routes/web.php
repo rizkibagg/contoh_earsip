@@ -48,4 +48,7 @@ Route::get('/surat-ktm/{id}/delete', [TidakMampuController::class, 'destroy']);
 Route::get('/surat-ktm/{id}/view', [TidakMampuController::class, 'show']);
 
 Route::get('/surat-belummenikah', [BelumMenikahController::class, 'index']);
+Route::post('/surat-belummenikah', [BelumMenikahController::class, 'store']);
+Route::get('/surat-belummenikah/{id}/view', [BelumMenikahController::class, 'show']);
+
 

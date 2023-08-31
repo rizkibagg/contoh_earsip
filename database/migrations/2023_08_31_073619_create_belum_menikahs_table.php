@@ -13,10 +13,11 @@ return new class extends Migration
     {
         Schema::create('belum_menikahs', function (Blueprint $table) {
             $table->id();
+            $table->string('nomor');
             $table->string('nama');
-            $table->string('jeniskelamin');
+            $table->string('jenis_kelamin');
             $table->string('tempat');
-            $table->string('tanggallahir');
+            $table->string('tanggal_lahir');
             $table->string('agama');
             $table->string('pekerjaan');
             $table->string('alamat');
