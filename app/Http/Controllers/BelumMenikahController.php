@@ -16,7 +16,7 @@ class BelumMenikahController extends Controller
     public function index()
     {
         $skbm = BelumMenikah::all();
-        return view('page.surat-belummenikah', ['dropdown' => 'Surat', 'title' => 'Surat Keterangan Belum Menikah'])->with('skbm', $skbm);
+        return view('page.surat-kbm', ['dropdown' => 'Surat', 'title' => 'Surat Keterangan Belum Menikah'])->with('skbm', $skbm);
     }
 
     /**
