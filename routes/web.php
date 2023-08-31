@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BelumMenikahController;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\TidakMampuController;
 use Illuminate\Support\Facades\Route;
@@ -45,3 +46,6 @@ Route::post('/surat-ktm', [TidakMampuController::class, 'store']);
 Route::put('/surat-ktm/{id}', [TidakMampuController::class, 'update']);
 Route::get('/surat-ktm/{id}/delete', [TidakMampuController::class, 'destroy']);
 Route::get('/surat-ktm/{id}/view', [TidakMampuController::class, 'show']);
+
+Route::get('/surat-belummenikah', [BelumMenikahController::class, 'index']);
+

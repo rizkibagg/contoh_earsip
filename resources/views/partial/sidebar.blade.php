@@ -144,6 +144,11 @@
                     </a>
                 </li>
                 <li>
+                    <a href="/surat-belummenikah" class="{{ ($title == "Surat Keterangan Belum Menikah") ? 'active' : '' }}">
+                        <i class="bi bi-circle"></i><span>Keterangan Belum Menikah</span>
+                    </a>
+                </li>
+                <li>
                     <a href="/surat-kematian" class="{{ ($title == "Surat Kematian") ? 'active' : '' }}">
                         <i class="bi bi-circle"></i><span>Kematian</span>
                     </a>
