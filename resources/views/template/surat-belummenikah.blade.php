@@ -126,7 +126,7 @@
             <tr>
                 <td width="538">
                     <center>
-                        <font size="3"><b>SURAT KETERANGAN KURANG MAMPU </b></font><br>
+                        <font size="3"><b>SURAT KETERANGAN BELUM MENIKAH </b></font><br>
                         <hr class="hrsatu">
                     </center>
                 </td>
@@ -145,9 +145,9 @@
         <table class="empat">
             <tr>
                 <td>
-                    <P> &#160; &#160; &#160; &#160; &#160; &#160; &#160;Yang Bertanda Tangan di bawah ini Kepala Desa
-                        Tompobulu Kecamatan
-                        Bulupoddo <br> <br> Kabupaten Sinjai. menerangkan dengan sesungguhnya bahwa :</P>
+                    <P> &#160; &#160; &#160; &#160; &#160; &#160; &#160;Yang bertanda tangan dibawah ini Lurah Sentolo, Kapanewon Sentolo, Kabupaten Kulon 
+                        <br> <br> Progo menerangkan dengan sebenarnya bahwa :
+                    </P>
                 </td>
             </tr>
         </table>
