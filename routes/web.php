@@ -47,5 +47,5 @@ Route::put('/surat-ktm/{id}', [TidakMampuController::class, 'update']);
 Route::get('/surat-ktm/{id}/delete', [TidakMampuController::class, 'destroy']);
 Route::get('/surat-ktm/{id}/view', [TidakMampuController::class, 'show']);
 
-Route::get('/surat-belummenikah', [BelumMenikahController::class, 'index']);
+Route::get('/surat-kbm', [BelumMenikahController::class, 'index']);
 

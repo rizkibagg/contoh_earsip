@@ -154,9 +154,9 @@
                             </thead>
                             <tbody>
                                 @php
-                                    $no = count($sktm);
+                                    $no = count($skbm);
                                 @endphp
-                                @foreach ($sktm->reverse() as $value)
+                                @foreach ($skbm->reverse() as $value)
                                     <tr>
                                         <th scope="row">{{ $no-- }}.</th>
                                         <td>{{ $value->nomor }}</td>
