@@ -164,7 +164,7 @@
             </tr>
             <tr>
                 <td style="vertical-align: top;">Alamat</td>
-                <td style="max-width: 350px; word-wrap: break-word;"> : {{ $sktm->alamat }}</td>
+                <td style="max-width: 350px; word-wrap: break-word;"> : {{ $skbm->alamat }}</td>
             </tr>
         </table>
         <table class="empat">
