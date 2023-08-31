@@ -163,8 +163,8 @@
                 <td> : {{$skbm->pekerjaan}}</td>
             </tr>
             <tr>
-                <td>Alamat</td>
-                <td> : {{$skbm->alamat}}</td>
+                <td style="vertical-align: top;">Alamat</td>
+                <td style="max-width: 350px; word-wrap: break-word;"> : {{ $sktm->alamat }}</td>
             </tr>
         </table>
         <table class="empat">
