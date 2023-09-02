@@ -137,8 +137,8 @@
 
         <table class="empat">
             <tr>
-                <td><P> &#160; &#160; &#160; &#160;  &#160; &#160; &#160;Yang Bertanda Tangan di bawah ini Lurah Sentolo, Kapanewon Sentolo, Kabupaten Kulon
-                    Progo<br> menerangkan dengan sebenernya bahwa :</P></td>
+                <td><P> &#160; &#160; &#160; &#160;  &#160; &#160; &#160;Yang Bertanda Tangan di bawah ini Lurah Sentolo, Kapanewon Sentolo, Kabupaten <br>Kulon
+                    Progo, menerangkan dengan sebenernya bahwa :</P></td>
             </tr>
         </table>
         <table  class="lima">
