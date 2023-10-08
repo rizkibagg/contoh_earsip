@@ -10,197 +10,95 @@
         </li><!-- End Dashboard Nav -->
 
         <li class="nav-item">
-            <a class="nav-link {{ ($dropdown == "Components") ? '' : 'collapsed' }}" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
-                <i class="bi bi-menu-button-wide"></i><span>Components</span><i class="bi bi-chevron-down ms-auto"></i>
+            <a class="nav-link {{ ($dropdown1 == "Surat Keluar") ? '' : 'collapsed' }}" data-bs-target="#surat-nav" data-bs-toggle="collapse" href="#">
+                <i class="fa-regular fa-envelope"></i><span>Surat Keluar</span><i class="bi bi-chevron-down ms-auto"></i>
             </a>
-            <ul id="components-nav" class="nav-content collapse {{ ($dropdown == "Components") ? 'show' : '' }}" data-bs-parent="#sidebar-nav">
-                <li>
-                    <a href="/alerts" class="{{ ($title == "Alerts") ? 'active' : '' }}">
-                        <i class="bi bi-circle"></i><span>Alerts</span>
+            <ul id="surat-nav" class="nav-content collapse {{ ($dropdown1 == "Surat Keluar") ? 'show' : '' }}" data-bs-parent="#sidebar-nav">
+                <li class="nav-item">
+                    <a class="nav-link {{ ($dropdown2 == "Kemasyarakatan") ? '' : 'collapsed' }}" data-bs-target="#kemasyarakatan-nav" data-bs-toggle="collapse" href="#">
+                        <span>Kemasyarakatan</span><i class="bi bi-chevron-down ms-auto dropdown-dua"></i>
                     </a>
+                    <ul id="kemasyarakatan-nav" class="nav-content collapse {{ ($dropdown2 == "Kemasyarakatan" && $dropdown1 == "Surat Keluar") ? 'show' : '' }}" data-bs-parent="#surat-nav">
+                        <li>
+                            <a href="/surat-ktm" class="{{ ($title == "Surat Keterangan Tidak Mampu") ? 'active' : '' }}">
+                                <i class="bi bi-circle"></i><span>Keterangan Tidak Mampu</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/surat-pbm" class="{{ ($title == "Surat Pernyataan Belum Menikah") ? 'active' : '' }}">
+                                <i class="bi bi-circle"></i><span>Pernyataan Belum Menikah</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/surat-kbm" class="{{ ($title == "Surat Keterangan Belum Menikah") ? 'active' : '' }}">
+                                <i class="bi bi-circle"></i><span>Keterangan  Belum Menikah</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/surat-belum-bekerja" class="{{ ($title == "Surat Pernyataan Belum Bekerja") ? 'active' : '' }}">
+                                <i class="bi bi-circle"></i><span>Pernyataan Belum Bekerja</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/surat-ket-hasil" class="{{ ($title == "Surat Keterangan Penghasilan") ? 'active' : '' }}">
+                                <i class="bi bi-circle"></i><span>Keterangan Penghasilan</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/surat-pektp" class="{{ ($title == "Surat Pengantar E-KTP") ? 'active' : '' }}">
+                                <i class="bi bi-circle"></i><span>Pengantar E-KTP</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/surat-pskck" class="{{ ($title == "Surat Pengantar SKCK") ? 'active' : '' }}">
+                                <i class="bi bi-circle"></i><span>Pengantar SKCK</span>
+                            </a>
+                        </li>
+                    </ul>
                 </li>
-                <li>
-                    <a href="/accordion" class="{{ ($title == "Accordion") ? 'active' : '' }}">
-                        <i class="bi bi-circle"></i><span>Accordion</span>
+                <li class="nav-item">
+                    <a class="nav-link {{ ($dropdown2 == "Pemerintahan") ? '' : 'collapsed' }}" data-bs-target="#pemerintahan-nav" data-bs-toggle="collapse" href="#">
+                        <span>Pemerintahan</span><i class="bi bi-chevron-down ms-auto dropdown-dua"></i>
                     </a>
-                </li>
-                <li>
-                    <a href="components-badges.html">
-                        <i class="bi bi-circle"></i><span>Badges</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="components-breadcrumbs.html">
-                        <i class="bi bi-circle"></i><span>Breadcrumbs</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="components-buttons.html">
-                        <i class="bi bi-circle"></i><span>Buttons</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="components-cards.html">
-                        <i class="bi bi-circle"></i><span>Cards</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="components-carousel.html">
-                        <i class="bi bi-circle"></i><span>Carousel</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="components-list-group.html">
-                        <i class="bi bi-circle"></i><span>List group</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="components-modal.html">
-                        <i class="bi bi-circle"></i><span>Modal</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="components-tabs.html">
-                        <i class="bi bi-circle"></i><span>Tabs</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="components-pagination.html">
-                        <i class="bi bi-circle"></i><span>Pagination</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="components-progress.html">
-                        <i class="bi bi-circle"></i><span>Progress</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="components-spinners.html">
-                        <i class="bi bi-circle"></i><span>Spinners</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="components-tooltips.html">
-                        <i class="bi bi-circle"></i><span>Tooltips</span>
-                    </a>
+                    <ul id="pemerintahan-nav" class="nav-content collapse {{ ($dropdown2 == "Pemerintahan" && $dropdown1 == "Surat Keluar") ? 'show' : '' }}" data-bs-parent="#surat-nav">
+                        <li>
+                            <a href="/surat-domisili" class="{{ ($title == "Surat Keterangan Domisili") ? 'active' : '' }}">
+                                <i class="bi bi-circle"></i><span>Keterangan Domisili</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/surat-kduda" class="{{ ($title == "Surat Keterangan Duda / Janda") ? 'active' : '' }}">
+                                <i class="bi bi-circle"></i><span>Keterangan Duda / Janda</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/surat-tidak-bekerja" class="{{ ($title == "Surat Tidak Bekerja") ? 'active' : '' }}">
+                                <i class="bi bi-circle"></i><span>Keterangan Tidak Bekerja</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/surat-kkematian" class="{{ ($title == "Surat Keterangan Kematian") ? 'active' : '' }}">
+                                <i class="bi bi-circle"></i><span>Keterangan Kematian</span>
+                            </a>
+                        </li>
+                    </ul>
                 </li>
             </ul>
-        </li><!-- End Components Nav -->
+        </li><!-- End Nav -->
 
         <li class="nav-item">
-            <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
-                <i class="bi bi-journal-text"></i><span>Forms</span><i class="bi bi-chevron-down ms-auto"></i>
+            <a class="nav-link {{ ($title == "Surat Masuk") ? '' : 'collapsed' }}" href="/surat-masuk">
+                <i class="fa-regular fa-envelope-open"></i>
+                <span>Surat Masuk</span>
             </a>
-            <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-                <li>
-                    <a href="forms-elements.html">
-                        <i class="bi bi-circle"></i><span>Form Elements</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="forms-layouts.html">
-                        <i class="bi bi-circle"></i><span>Form Layouts</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="forms-editors.html">
-                        <i class="bi bi-circle"></i><span>Form Editors</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="forms-validation.html">
-                        <i class="bi bi-circle"></i><span>Form Validation</span>
-                    </a>
-                </li>
-            </ul>
-        </li><!-- End Forms Nav -->
+        </li><!-- End Surat Masuk Nav -->
 
         <li class="nav-item">
-            <a class="nav-link {{ ($dropdown == "Tables") ? '' : 'collapsed' }}" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
-                <i class="bi bi-layout-text-window-reverse"></i><span>Tables</span><i class="bi bi-chevron-down ms-auto"></i>
+            <a class="nav-link {{ ($title == "Captcha") ? '' : 'collapsed' }}" href="/komentar">
+                <i class="bi bi-grid"></i>
+                <span>Captcha</span>
             </a>
-            <ul id="tables-nav" class="nav-content collapse {{ ($dropdown == "Tables") ? 'show' : '' }}" data-bs-parent="#sidebar-nav">
-                <li>
-                    <a href="tables-general.html">
-                        <i class="bi bi-circle"></i><span>General Tables</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="/tables-data" class="{{ ($title == "Data Tables") ? 'active' : '' }}">
-                        <i class="bi bi-circle"></i><span>Data Tables</span>
-                    </a>
-                </li>
-            </ul>
-        </li><!-- End Tables Nav -->
-
-        <li class="nav-item">
-            <a class="nav-link {{ ($dropdown == "Surat") ? '' : 'collapsed' }}" data-bs-target="#surat-nav" data-bs-toggle="collapse" href="#">
-                <i class="fa-regular fa-envelope"></i><span>Surat</span><i class="bi bi-chevron-down ms-auto"></i>
-            </a>
-            <ul id="surat-nav" class="nav-content collapse {{ ($dropdown == "Surat") ? 'show' : '' }}" data-bs-parent="#sidebar-nav">
-                <li>
-                    <a href="/surat-ktm" class="{{ ($title == "Surat Keterangan Tidak Mampu") ? 'active' : '' }}">
-                        <i class="bi bi-circle"></i><span>Keterangan Tidak Mampu</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="/surat-kematian" class="{{ ($title == "Surat Kematian") ? 'active' : '' }}">
-                        <i class="bi bi-circle"></i><span>Kematian</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="/surat-kelahiran" class="{{ ($title == "Surat Kelahiran") ? 'active' : '' }}">
-                        <i class="bi bi-circle"></i><span>Kelahiran</span>
-                    </a>
-                </li>
-            </ul>
-        </li><!-- End Tables Nav -->
-
-        <li class="nav-item">
-            <a class="nav-link collapsed" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="#">
-                <i class="bi bi-bar-chart"></i><span>Charts</span><i class="bi bi-chevron-down ms-auto"></i>
-            </a>
-            <ul id="charts-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-                <li>
-                    <a href="charts-chartjs.html">
-                        <i class="bi bi-circle"></i><span>Chart.js</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="charts-apexcharts.html">
-                        <i class="bi bi-circle"></i><span>ApexCharts</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="charts-echarts.html">
-                        <i class="bi bi-circle"></i><span>ECharts</span>
-                    </a>
-                </li>
-            </ul>
-        </li><!-- End Charts Nav -->
-
-        <li class="nav-item">
-            <a class="nav-link collapsed" data-bs-target="#icons-nav" data-bs-toggle="collapse" href="#">
-                <i class="bi bi-gem"></i><span>Icons</span><i class="bi bi-chevron-down ms-auto"></i>
-            </a>
-            <ul id="icons-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-                <li>
-                    <a href="icons-bootstrap.html">
-                        <i class="bi bi-circle"></i><span>Bootstrap Icons</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="icons-remix.html">
-                        <i class="bi bi-circle"></i><span>Remix Icons</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="icons-boxicons.html">
-                        <i class="bi bi-circle"></i><span>Boxicons</span>
-                    </a>
-                </li>
-            </ul>
-        </li><!-- End Icons Nav -->
+        </li><!-- End Captcha Nav -->
 
         <li class="nav-heading">Pages</li>
 

@@ -17,7 +17,11 @@ class TidakMampuController extends Controller
     public function index()
     {
         $sktm = TidakMampu::all();
-        return view('page.surat-ktm', ['dropdown' => 'Surat', 'title' => 'Surat Keterangan Tidak Mampu'])->with('sktm', $sktm);
+        return view('page.surat-ktm', [
+            'dropdown1' => 'Surat Keluar',
+            'dropdown2' => 'Kemasyarakatan',
+            'title' => 'Surat Keterangan Tidak Mampu'
+        ])->with('sktm', $sktm);
     }
     public function store(Request $request)
     {

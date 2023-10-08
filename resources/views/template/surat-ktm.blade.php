@@ -97,24 +97,24 @@
     <center>
         <table class="satu">
             <tr >
-                <td><img src="{{ public_path('template/assets/img/kulonprogo.png') }}" style="height: 100px"></td>
-                <td>
+                <td><img src="{{ public_path('template/assets/img/kop_surat.png') }}" style="width: 95%; height:auto"></td>
+                {{-- <td>
                     <center>
                         <font size="5"><b>&#160; &#160; &#160; &#160; PEMERINTAH BALAI DESA SENTOLO</b></font><br>
                         <font size="5"><b>&#160; &#160; &#160; &#160; &#160; KECAMATAN SENTOLO</b></font><br> <br>
                         <font size="2"><b>&#160; &#160; &#160; &#160; Alamat : Siwalan, Sentolo Kidul, Sentolo, Kec. Sentolo, Kulon Progo</b></font><br>
                         <font size="1"><b>&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160;Telepon : xxxxxxxxxxxxx, Website : sentolo-kulonprogo.desa.id</b></font><br>
                     </center>
-                </td>
+                </td> --}}
             </tr>
         </table>
-        <table class="dua">
+        {{-- <table class="dua">
             <tr>
                 <td colspan="2" >
                     <hr>
                 </td>
             </tr>
-        </table>
+        </table> --}}
         <table class="tiga">
             <tr>
                 <td width="538">

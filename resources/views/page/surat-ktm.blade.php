@@ -28,7 +28,7 @@
 
                             <!-- Modal -->
                             <div class="modal fade" id="tambah-surat-ktm" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="tambah-surat-ktm-Label" aria-hidden="true">
-                                <div class="modal-dialog modal-lg">
+                                <div class="modal-dialog modal-lg modal-dialog-scrollable">
                                     <div class="modal-content">
                                         <div class="modal-header">
                                             <h1 class="modal-title fs-5" id="tambah-surat-ktm-Label">Data Tidak Mampu</h1>
@@ -40,7 +40,7 @@
                                                 <div class="row mb-3">
                                                     <label for="nomor" class="col-sm-3 col-form-label">Nomor Surat</label>
                                                     <div class="col-sm-9">
-                                                        <input type="text" class="form-control" id="nomor" name="nomor" value="000/KTM/VII/2023" required>
+                                                        <input type="text" class="form-control" id="nomor" name="nomor" value="000/KTM/VIII/2023" required>
                                                     </div>
                                                 </div>
                                                 <div class="row mb-3">
@@ -172,7 +172,7 @@
 
                                     <!-- Modal Edit SKTM -->
                                     <div class="modal fade" id="ModalEditSKTM-{{$value->id}}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="ModalEditSKTMLabel" aria-hidden="true">
-                                        <div class="modal-dialog modal-lg">
+                                        <div class="modal-dialog modal-lg modal-dialog-scrollable">
                                             <div class="modal-content">
                                                 <form action="/surat-ktm/{{$value->id}}" method="POST" >
                                                     @csrf
