@@ -99,6 +99,93 @@
                 <span>Captcha</span>
             </a>
         </li><!-- End Captcha Nav -->
+            <ul id="tables-nav" class="nav-content collapse {{ ($dropdown == "Tables") ? 'show' : '' }}" data-bs-parent="#sidebar-nav">
+                <li>
+                    <a href="tables-general.html">
+                        <i class="bi bi-circle"></i><span>General Tables</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/tables-data" class="{{ ($title == "Data Tables") ? 'active' : '' }}">
+                        <i class="bi bi-circle"></i><span>Data Tables</span>
+                    </a>
+                </li>
+            </ul>
+        </li><!-- End Tables Nav -->
+
+        <li class="nav-item">
+            <a class="nav-link {{ ($dropdown == "Surat") ? '' : 'collapsed' }}" data-bs-target="#surat-nav" data-bs-toggle="collapse" href="#">
+                <i class="fa-regular fa-envelope"></i><span>Surat</span><i class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <ul id="surat-nav" class="nav-content collapse {{ ($dropdown == "Surat") ? 'show' : '' }}" data-bs-parent="#sidebar-nav">
+                <li>
+                    <a href="/surat-ktm" class="{{ ($title == "Surat Keterangan Tidak Mampu") ? 'active' : '' }}">
+                        <i class="bi bi-circle"></i><span>Keterangan Tidak Mampu</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/surat-kbm" class="{{ ($title == "Surat Keterangan Belum Menikah") ? 'active' : '' }}">
+                        <i class="bi bi-circle"></i><span>Keterangan Belum Menikah</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/surat-kematian" class="{{ ($title == "Surat Kematian") ? 'active' : '' }}">
+                        <i class="bi bi-circle"></i><span>Kematian</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/surat-kelahiran" class="{{ ($title == "Surat Kelahiran") ? 'active' : '' }}">
+                        <i class="bi bi-circle"></i><span>Kelahiran</span>
+                    </a>
+                </li>
+            </ul>
+        </li><!-- End Tables Nav -->
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="#">
+                <i class="bi bi-bar-chart"></i><span>Charts</span><i class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <ul id="charts-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                <li>
+                    <a href="charts-chartjs.html">
+                        <i class="bi bi-circle"></i><span>Chart.js</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="charts-apexcharts.html">
+                        <i class="bi bi-circle"></i><span>ApexCharts</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="charts-echarts.html">
+                        <i class="bi bi-circle"></i><span>ECharts</span>
+                    </a>
+                </li>
+            </ul>
+        </li><!-- End Charts Nav -->
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" data-bs-target="#icons-nav" data-bs-toggle="collapse" href="#">
+                <i class="bi bi-gem"></i><span>Icons</span><i class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <ul id="icons-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                <li>
+                    <a href="icons-bootstrap.html">
+                        <i class="bi bi-circle"></i><span>Bootstrap Icons</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="icons-remix.html">
+                        <i class="bi bi-circle"></i><span>Remix Icons</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="icons-boxicons.html">
+                        <i class="bi bi-circle"></i><span>Boxicons</span>
+                    </a>
+                </li>
+            </ul>
+        </li><!-- End Icons Nav -->
 
         <li class="nav-heading">Pages</li>
 

@@ -79,7 +79,7 @@ class TidakMampuController extends Controller
             'pekerjaan' => 'required',
             'alamat' => 'required',
             'deskripsi' => 'required',
-        ]);
+        ]); 
 
         $sktm = TidakMampu::find($id);
         $sktm->nomor = $request->nomor;

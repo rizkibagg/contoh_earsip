@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CaptchaController;
+use App\Http\Controllers\BelumMenikahController;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\PendudukController;
 use App\Http\Controllers\SkpenghasilanController;
@@ -82,3 +83,6 @@ Route::post('/komentar', [CaptchaController::class, 'store']);
 // Route::get('/komentar/{id}/view', [CaptchaController::class, 'show']);
 
 Route::get('/get-penduduk/{nik}', [PendudukController::class, 'show']);
+Route::get('/surat-belummenikah', [BelumMenikahController::class, 'index']);
+Route::post('/surat-belummenikah', [BelumMenikahController::class, 'store']);
+Route::get('/surat-belummenikah/{id}/view', [BelumMenikahController::class, 'show']);
