@@ -100,6 +100,27 @@
             </a>
         </li>
 
+        <li class="nav-item">
+            <a class="nav-link {{ ($title == "Test 1") ? '' : 'collapsed' }}" href="#">
+                <i class="bi bi-grid"></i>
+                <span>Test 1</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link {{ ($title == "Test 2") ? '' : 'collapsed' }}" href="#">
+                <i class="bi bi-grid"></i>
+                <span>Test 2</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link {{ ($title == "Test 3") ? '' : 'collapsed' }}" href="#">
+                <i class="bi bi-grid"></i>
+                <span>Test 3</span>
+            </a>
+        </li>
+
     </ul>
 
 </aside>
